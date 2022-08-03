@@ -1,14 +1,9 @@
-import {
-  HashRouter as Router,
-  Route,
-} from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import Home from '../Home/Home';
 import './App.css';
-
-
+import EditForm from '../StudentDetail/EditForm';
 
 function App() {
-
     return (
         <div className="App">
             <header className="App-header">
@@ -17,10 +12,11 @@ function App() {
             <Router>
                 <Route exact path="/" component={Home} />
                 {/* TODO Add Edit Route */}
+                {/* //! 1. Add Edit Route and Import the component */}
+                <Route exact path="/edit" component={EditForm} />
             </Router>
         </div>
     );
-
 }
 
 export default App;
